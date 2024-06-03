@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>My first web page</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+
+        <style>
+            h1{
+                font-size: 70px;
+                background-color: #eee0c5;
+                color: rgb(132, 73, 121);
+            }
+
+            h1{
+                color: green;
+                text-align: center;
+            }
+
+            span{
+                color: #4a4d67;
+            }
+
+            table, td, th{
+                border: 1px solid black;
+            }
+
+            table{
+                border-collapse: collapse;
+            }
+
+            .text1{
+                text-align: center;
+            }
+
+            #home_text{
+                font-size: 30px;
+                width: 200px;
+                height: 200px;
+                font-weight: 700;
+                font-style: italic;
+                border: 4px dashed #000;
+                border-radius: 15px 50px 15px 15px;
+                padding: 20px 100px 20px 20px; /*Top Right Bottom Left*/
+                padding-bottom: 100px;
+                margin: 150px; /*Top Right Bottom Left*/
+                margin-left: 0;
+            }
+
+            a:hover{
+                color: #a12424;
+                font-size: 20px;
+                text-decoration: underline;
+            }
+        </style>
+
+        <script>
+            //alert('Hello World');
+        </script>
+    </head>
+
+    <body>
+        <!-- Headings tag -->
+        <h1>Hello World</h1>
+        <h2>Hello World</h2>
+        <h3 class="text1">Hello World</h3>
+        <h4>Hello World</h4>
+        <h5>Hello World</h5>
+        <h6>Hello World</h6>
+
+
+        <!-- Paragraph and line break tag -->
+        <p class="text1" id="home_text">Welcome to this bootcamp. <br> I hope you enjoy it.</p>
+
+        <!-- DIV -->
+        <div>
+            <h3>Hello world</h3>
+            <p>Hi everyone</p>
+        </div>
+
+        <!-- Span -->
+        <p>My name is <span>John Wick</span></p>
+
+        <!-- Uordered list -->
+        <ul>
+            <li class="text1">Running</li>
+            <li>Jumping</li>
+            <li>Walking</li>
+            <li>Singing</li>
+            <li>Clapping</li>
+        </ul>
+
+        <!-- Ordered list -->
+        <ol>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ol>
+
+        <!-- Image -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/640px-Flag_of_Canada_%28Pantone%29.svg.png" height="100">
+        <br>
+
+        <a href="https://www.calgarytower.com/">
+            <img src="tower.webp" width="200">
+        </a>
+
+        <!-- Anchor element -->
+        <br><br>
+        <a href="http://google.ca" title="Google link">Go to Google</a>
+        <a href="about.html" style="color: darkorange">Go to About Page</a>
+
+        <!-- HTML table -->
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th colspan="2">Name</th>
+                    <th>Age</th>
+                    <th>Country</th>
+                    <th>Department</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th>Name</th>
+                    <td>John Wick</td>
+                    <td>Peter Wick</td>
+                    <td>56</td>
+                    <td>US</td>
+                    <td>Music</td>
+                </tr>
+
+                <tr>
+                    <th>Age</th>
+                    <td colspan="2">Victoria Benneth</td>
+                
+                    <td>23</td>
+                    <td>Spain</td>
+                    <td>Mathematics</td>
+                </tr>
+
+                <tr>
+                    <th>Country</th>
+                    <td colspan="2">Jennifer Lopez</td>
+                    <td>45</td>
+                    <td>Brazil</td>
+                    <td>Statistics</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!-- Web form -->
+
+        <form>
+            <p>
+                <label>Name</label>
+                <input type="text" placeholder="Type your name" required>
+            </p>
+            <p>
+                <label>Age</label>
+                <input type="number" placeholder="Type your age">
+            </p>
+            <p>
+                <label>Email</label>
+                <input type="email" placeholder="Type your email">
+            </p>
+            <p>
+                <label>Password</label>
+                <input type="password" placeholder="Type your email">
+            </p>
+
+            <p>
+                <label>What is your favorite sport?</label><br>
+                <input type="radio" name="sports"> Running <br>
+                <input type="radio" name="sports"> Basket ball <br>
+                <input type="radio" name="sports"> Soccer <br>
+            </p>
+
+            <p>
+                <label>Select your hobbies?</label><br>
+                <input type="checkbox" name="hobbies"> Dancing <br>
+                <input type="checkbox" name="hobbies"> Singing <br>
+                <input type="checkbox" name="hobbies"> Eating <br>
+            </p>
+
+            <p>
+                <label>Gender</label>
+                <select>
+                    <option>Female</option>
+                    <option>Male</option>
+                </select>
+            </p>
+
+            <button type="submit" onclick="alert('form submitted')">Submit</button>
+        </form>
+
+    </body>
+
+</html>
