@@ -9,6 +9,7 @@ let students = [
     {id: 2, name: "Jennifer Lopez", department: "Music"},
     {id: 3, name: "Victoria Benneth", department: "History"},
     {id: 4, name: "Peter Pan", department: "History"},
+    {id: 5, name: "Haben Jackson", department: "Music"},
 ];
 
 //Routes
