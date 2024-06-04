@@ -12,7 +12,19 @@ dbConfig.authenticate().then(function(){
 
 //Get all students
 app.get('/students', function(req, res){
-    Student.findAll().then(function(result){
+    let queryParams = {where: {}};
+
+    //Filter based on country ID
+    if (req.query.country !== undefined){
+        queryParams.where.country_id = req.query.country;
+    }
+
+    //filter based on department ID
+    if (req.query.department !== undefined){
+        queryParams.where.dept_id = req.query.department;
+    }
+
+    Student.findAll(queryParams).then(function(result){
         res.status(200).send(result);
     }).catch(function(err){
         res.status(500).send(err)
