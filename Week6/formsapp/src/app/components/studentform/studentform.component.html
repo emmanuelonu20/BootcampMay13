@@ -1,0 +1,34 @@
+<form [formGroup]="studentForm">
+    <p>
+        <label>Name</label>
+        <input type="text" formControlName="name">
+
+        <span *ngIf="nameFormControl.touched && nameFormControl.errors?.['required']">
+            Please enter your name
+        </span>
+
+        <span *ngIf="nameFormControl.dirty && nameFormControl.errors?.['minlength']">
+            The name field must be at least 3 characters.
+        </span>
+    </p>
+
+    <p>
+        <label>Email</label>
+        <input type="email" formControlName="email">
+
+        <span *ngIf="emailFormControl.touched && emailFormControl.errors?.['required']">
+            The email field is required
+        </span>
+       
+        <span *ngIf="emailFormControl.dirty && emailFormControl.errors?.['email']">
+            The email field must be a valid email address.
+        </span>
+    </p>
+
+    <p>
+        <label>Country</label>
+        <input type="text" formControlName="country">
+    </p>
+
+    <button type="button" (click)="onSubmit()" [disabled]="studentForm.invalid">Submit</button>
+</form>
