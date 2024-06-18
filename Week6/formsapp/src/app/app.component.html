@@ -1,1 +1,12 @@
-<app-studentform></app-studentform>
+<!-- The router-outlet is used to display the content of each page after routing -->
+<router-outlet></router-outlet>
+
+
+<ul>
+    <li>
+        <a routerLink="students" routerLinkActive="active">All Students</a>
+    </li>
+    <li>
+        <a routerLink="create-student" routerLinkActive="active">Create Student</a>
+    </li>
+</ul>

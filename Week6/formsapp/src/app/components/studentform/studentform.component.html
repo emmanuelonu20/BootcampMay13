@@ -10,6 +10,10 @@
         <span *ngIf="nameFormControl.dirty && nameFormControl.errors?.['minlength']">
             The name field must be at least 3 characters.
         </span>
+
+        <span *ngIf="nameFormControl.dirty && nameFormControl.errors?.['prohibited']">
+            Name contains a prohibited word.
+        </span>
     </p>
 
     <p>

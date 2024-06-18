@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { avoidWord, prohibited } from '../../custom-validation';
 
 @Component({
   selector: 'app-studentform',
@@ -14,7 +15,7 @@ export class StudentformComponent {
 
   constructor(private fb: FormBuilder){
     this.studentForm = fb.group({
-      name: ['', [Validators.required, Validators.minLength(3)]],
+      name: ['', [Validators.required, Validators.minLength(3), avoidWord, prohibited(/jay/), prohibited(/kushan/)]],
       email: ['', [Validators.required, Validators.email]],
       country: ['']
     });
