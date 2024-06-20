@@ -14,7 +14,15 @@ export class StudentsService {
 
   constructor() { }
 
+  //Returns all students data
   getStudents(){
     return this.students;
+  }
+
+  //Return a single student data based on the studentId parameter
+  getStudent(studentId: number){
+    return this.students.find(stud => {
+      return stud.id === studentId;
+    })
   }
 }

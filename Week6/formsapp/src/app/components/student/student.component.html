@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ student.name }}</h5>
+      <p class="card-text">{{ student.email }}</p>
+      <a [routerLink]="['/view-student', student.id]" class="btn btn-primary me-2">View Student</a>
+      <button type="button" class="btn btn-danger" (click)="onDelete()">Delete</button>
+    </div>
+</div>

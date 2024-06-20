@@ -16,4 +16,14 @@ export class StudentsComponent {
     this.students = studentService.getStudents();
   }
 
+  deleteStudent(studentId: number) {
+    //Get the student array index
+    let studentArrIndex = this.students.findIndex(stud => {
+      return stud.id === studentId;
+    });
+
+    //Remove item from array
+    this.students.splice(studentArrIndex, 1);
+  }
+
 }

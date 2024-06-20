@@ -8,6 +8,7 @@ import { StudentformComponent } from './components/studentform/studentform.compo
 import { StudentsComponent } from './components/students/students.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { StudentDetailsComponent } from './components/student-details/student-details.component';
+import { StudentComponent } from './components/student/student.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { StudentDetailsComponent } from './components/student-details/student-de
     StudentformComponent,
     StudentsComponent,
     NotfoundComponent,
-    StudentDetailsComponent
+    StudentDetailsComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,8 @@
-<p>student-details works!</p>
+<div *ngIf="student; else notfound">
+    <p>ID: {{ student.id }}</p>
+    <p>Name: {{ student.name }}</p>
+    <p>Country: {{ student.country }}</p>
+    <p>Email: {{ student.email }}</p>
+</div>
+
+<ng-template #notfound>Student not found</ng-template>
