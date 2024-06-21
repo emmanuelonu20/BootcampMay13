@@ -4,9 +4,13 @@ const dbConfig = require('./dbConfig');
 const Student = require('./models/student');
 const Department = require('./models/department');
 const Country = require('./models/country');
+const cors = require('cors');
+
+app.use(cors());
 
 //middleware
 app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 //Associations
 //Relationship between the students and departments DB tables
@@ -45,6 +49,29 @@ app.get('/students', function(req, res){
 
     Student.findAll(queryParams).then(function(result){
         res.status(200).send(result);
+    }).catch(function(err){
+        res.status(500).send(err)
+    });
+});
+
+//Get a single student data based on the student ID
+app.get('/students/:student_id', function(req, res){
+    let queryParams = {
+        where: {},
+        include: [Department, Country]
+    };
+
+    //Get student ID
+    const studentId = parseInt(req.params.student_id);
+
+    Student.findByPk(studentId, queryParams).then(function(result){
+
+        if(result){
+            res.status(200).send(result);
+        } else {
+            res.status(404).send('Student not found');
+        }
+        
     }).catch(function(err){
         res.status(500).send(err)
     });

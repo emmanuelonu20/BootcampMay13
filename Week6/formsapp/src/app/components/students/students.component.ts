@@ -9,11 +9,13 @@ import { Istudent } from '../../interfaces/istudent';
 })
 export class StudentsComponent {
 
-  students: Istudent[];
+  students!: Istudent[];
 
   //dependency injection
   constructor(private studentService: StudentsService){
-    this.students = studentService.getStudents();
+    studentService.getStudents().subscribe((result) => {
+      this.students = result;
+    });
   }
 
   deleteStudent(studentId: number) {
@@ -24,6 +26,13 @@ export class StudentsComponent {
 
     //Remove item from array
     this.students.splice(studentArrIndex, 1);
+
+    //Remove from database
+    this.studentService.deleteStudent(studentId).subscribe((result) => {
+      if(result) {
+        alert('Student was deleted successfully');
+      }
+    });
   }
 
 }

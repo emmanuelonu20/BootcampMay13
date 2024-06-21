@@ -9,6 +9,7 @@ import { StudentsComponent } from './components/students/students.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { StudentDetailsComponent } from './components/student-details/student-details.component';
 import { StudentComponent } from './components/student/student.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { StudentComponent } from './components/student/student.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

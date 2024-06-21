@@ -19,6 +19,10 @@ const Student = dbConfig.define('student', {
     country_id: {
         type: Sequelize.INTEGER,
         allowNull: false
+    },
+    email: {
+        type: Sequelize.STRING,
+        allowNull: false
     }
 }, {timestamps: false});
 

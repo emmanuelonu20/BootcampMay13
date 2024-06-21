@@ -30,8 +30,13 @@
     </p>
 
     <p>
-        <label>Country</label>
-        <input type="text" formControlName="country">
+        <label>Country ID</label>
+        <input type="number" formControlName="country_id">
+    </p>
+
+    <p>
+        <label>Department ID</label>
+        <input type="number" formControlName="dept_id">
     </p>
 
     <button type="button" (click)="onSubmit()" [disabled]="studentForm.invalid">Submit</button>

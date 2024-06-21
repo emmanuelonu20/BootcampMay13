@@ -10,12 +10,14 @@ import { Istudent } from '../../interfaces/istudent';
 })
 export class StudentDetailsComponent {
 
-  student: Istudent;
+  student!: Istudent;
 
   constructor(private route: ActivatedRoute, private studentService: StudentsService){
     let studentId = parseInt(route.snapshot.paramMap.get('student_id')!);
     
-    this.student = studentService.getStudent(studentId)!;
+    studentService.getStudent(studentId).subscribe((result) => {
+      this.student = result;
+    });
   }
 
 }
