@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tab4</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-button (click)="takePicture()">Take a Picture</ion-button>
+  <img [src]="imageUrl">
+
+
+  <ion-button (click)="showLocalNotification()">Local Notification</ion-button>
+  
+</ion-content>
